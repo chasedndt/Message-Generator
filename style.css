@@ -17,3 +17,18 @@
     margin: 20px 0;
     min-height: 50px;
 }
+
+.message-section {
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.character-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#message-display {
+    transition: opacity 0.3s ease-in-out;
+}
