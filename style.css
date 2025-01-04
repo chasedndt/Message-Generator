@@ -32,3 +32,18 @@
 #message-display {
     transition: opacity 0.3s ease-in-out;
 }
+
+
+.message-bubble {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: messageAppear 0.5s forwards;
+}
+
+@keyframes messageAppear {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
