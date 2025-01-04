@@ -1,7 +1,16 @@
+h1 {
+    text-align: center;
+    color: #2d3748;
+    margin-bottom: 30px;
+}
+
 .character-section {
     width: 200px;
     height: 200px;
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
 #character-image {
@@ -16,6 +25,9 @@
     padding: 15px;
     margin: 20px 0;
     min-height: 50px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: messageAppear 0.5s forwards;
 }
 
 .message-section {
@@ -23,15 +35,10 @@
     margin: 20px auto;
 }
 
-.character-section {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
 #message-display {
     transition: opacity 0.3s ease-in-out;
 }
+
 
 
 .message-bubble {
@@ -45,5 +52,58 @@
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* Responsive Design */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .character-section {
+        width: 150px;
+    }
+}
+
+/* Hover States */
+#generate {
+    background: #4a5568;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+}
+
+#generate:hover {
+    background: #2d3748;
+    transform: translateY(-2px);
+}
+
+/* Typing Animation */
+.typing-animation {
+    display: inline-block;
+    overflow: hidden;
+    border-right: 2px solid #4a5568;
+    white-space: nowrap;
+    margin: 0;
+    animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #4a5568 }
 }
 
