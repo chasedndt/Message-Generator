@@ -11,23 +11,41 @@ h1 {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.character-section:hover {
+    transform: scale(1.05);
 }
 
 #character-image {
     width: 100%;
     height: 100%;
     object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+    transition: filter 0.3s ease;
+}
+
+#character-image:hover {
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
 }
 
 .message-bubble {
-    background: #f0f0f0;
+    background: #d80ebd;
     border-radius: 15px;
-    padding: 15px;
+    padding: 20px;
     margin: 20px 0;
     min-height: 50px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
     opacity: 0;
     transform: translateY(20px);
     animation: messageAppear 0.5s forwards;
+}
+
+.message-bubble:hover {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    transform: translateY(-2px);
 }
 
 .message-section {
@@ -37,14 +55,6 @@ h1 {
 
 #message-display {
     transition: opacity 0.3s ease-in-out;
-}
-
-
-
-.message-bubble {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: messageAppear 0.5s forwards;
 }
 
 @keyframes messageAppear {
@@ -65,7 +75,6 @@ h1 {
     .container {
         padding: 10px;
     }
-
     .character-section {
         width: 150px;
     }
@@ -107,3 +116,28 @@ h1 {
     50% { border-color: #4a5568 }
 }
 
+/* Button Styling */
+#generate {
+    background: #9b12eb;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#generate:hover {
+    background: #2d3748;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(175, 8, 241, 0.2);
+}
+
+#generate:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 2px rgba(148, 8, 230, 0.1);
+    background: #9b12eb;
+    color: white;
+}
