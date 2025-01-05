@@ -51,3 +51,16 @@ document.getElementById('generate').addEventListener('click', () => {
     const newMessage = generateMessage();
     typeMessage(newMessage, messageDisplay);
 });
+
+// adds visible focus states entById('generate').addEventListener('keydown', (event) => {
+    // when user presses Enter or Space, generate a new message
+    // and display it
+
+document.getElementById('generate').addEventListener('keydown', (event) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        const messageDisplay = document.getElementById('message-display');
+        const newMessage = generateMessage();
+        typeMessage(newMessage, messageDisplay);
+    }
+});

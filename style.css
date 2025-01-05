@@ -141,3 +141,12 @@ h1 {
     background: #9b12eb;
     color: white;
 }
+
+#generate:focus {
+    outline: 3px solid #4a5568;
+    outline-offset: 2px;
+    background: #7209b7;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
