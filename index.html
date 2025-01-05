@@ -1,24 +1,20 @@
-<!-- Basic HTML Structure -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>Random Message Generator</title>
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Random Message Generator</h1>
-        <div class="character-section">
-            <img id="character-image" src="resources/IDA_simple_avatar_head_only_minimal_line_work_only_graceful_cur_51d59387-07e0-4adb-bc7d-f83e73f88436.png" alt="Character">
+    <div class="container" role="main">
+        <h1 id="page-title">Message Generator</h1>
+        <div class="character-section" aria-label="Character avatar">
+            <img id="character-image" src="resources/IDA_simple_avatar_head_only_minimal_line_work_only_graceful_cur_51d59387-07e0-4adb-bc7d-f83e73f88436.png" alt="Stoic character avatar">
         </div>
-        <div class="message-section">
-            <div class="message-bubble" id="message-display"></div>
-            <button id="generate">Talk to Character</button>
+        <div class="message-section" role="region" aria-live="polite">
+            <div class="message-bubble" id="message-display" aria-label="Generated message"></div>
+            <button id="generate" aria-label="Generate new message">Talk to Character</button>
         </div>
     </div>
     <script src="scripts/main.js"></script>
 </body>
 </html>
-
-
-
